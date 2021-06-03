@@ -12,7 +12,7 @@ pipeline {
 				}
 				sh 'pwd'
 				sh 'whoami'
-				sh 'cd build'
+				sh 'cd build/ansible'
 				sh 'ls -l'
 			}
 		}
