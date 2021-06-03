@@ -12,8 +12,8 @@ pipeline {
 				}
 				sh 'pwd'
 				sh 'whoami'
-				
-				sh 'ls -l ./build'
+				sh 'docker build -t apacheimg ./build/apache/'
+				sh 'docker run -d -p 80:80 --name apachecon apacheimg'
 			}
 		}
 	}
