@@ -6,10 +6,7 @@ pipeline {
 	stages {
 		stage ('one') {
 			steps {
-				sh 'mkdir build'
-				dir('build') {
-					git branch: branchname, url: repourl
-				}
+				git branch: branchname, url: repourl
 				sh 'pwd'
 				sh 'whoami'
 				sh 'docker build -t apacheimg ./build/apache/'
