@@ -5,12 +5,14 @@ pipeline {
 	agent any
 	stages {
 		stage ('one') {
-			sh 'mkdir build'
-			dir('build') {
-				git branch: branchname, url: repourl
+			steps {
+				sh 'mkdir build'
+				dir('build') {
+					git branch: branchname, url: repourl
+				}
+				sh 'pwd'
+				sh 'whoami'
 			}
-			sh 'pwd'
-			sh 'whoami'
 		}
 	}
 }
