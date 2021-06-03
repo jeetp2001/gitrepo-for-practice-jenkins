@@ -13,7 +13,7 @@ pipeline {
 				sh 'pwd'
 				sh 'whoami'
 				
-				sh 'ls -l'
+				sh 'ls -l ./build'
 			}
 		}
 	}
