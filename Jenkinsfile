@@ -12,6 +12,8 @@ pipeline {
 				}
 				sh 'pwd'
 				sh 'whoami'
+				sh 'cd build'
+				sh 'ls -l'
 			}
 		}
 	}
